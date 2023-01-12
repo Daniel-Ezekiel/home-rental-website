@@ -1,0 +1,77 @@
+@import "../variables";
+@import "../mixins";
+
+.property-features-section {
+  @include flex(column-reverse);
+  gap: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  font-size: 1.6rem;
+
+  .feature-details {
+    @include flex(column, start, start);
+    gap: 1.5rem;
+
+    h2 {
+      font-size: 2.5rem;
+      margin: 0.5rem;
+    }
+
+    a {
+      font-size: 1.6rem;
+      color: #fff;
+      text-decoration: none;
+      padding: 1.5rem 2.5rem;
+      border-radius: 1.3rem;
+      background-color: $orange;
+    }
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "a a b b"
+      "a a b b"
+      "c d d d"
+      "c d d d";
+    gap: 1.5rem;
+
+    div {
+      height: 18rem;
+      border-radius: 2rem;
+      padding: 2rem 1.5rem;
+
+      span {
+        display: block;
+        text-align: center;
+        font-weight: 700;
+        color: #fff;
+      }
+    }
+    .feature-bg1 {
+      grid-area: a;
+      background: url(../../../assets/img/feature1.png) 50% 50% no-repeat;
+      background-size: cover;
+    }
+    .feature-bg2 {
+      grid-area: b;
+      background: url(../../../assets/img/feature2.png) 50% 50% no-repeat;
+      background-size: cover;
+      height: 15rem;
+      place-self: flex-end;
+    }
+    .feature-bg3 {
+      grid-area: c;
+      background: url(../../../assets/img/feature3.png) 50% 50% no-repeat;
+      background-size: cover;
+      height: 15rem;
+    }
+    .feature-bg4 {
+      grid-area: d;
+      background: url(../../../assets/img/feature4.png) 50% 50% no-repeat;
+      background-size: cover;
+    }
+  }
+}

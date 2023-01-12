@@ -1,0 +1,55 @@
+@import "../variables";
+@import "../mixins";
+
+.property {
+  max-width: 34rem;
+  @include flex();
+  gap: 2rem;
+  border: 0.1rem solid #979797;
+  border-radius: 2rem;
+  background-color: #fff;
+
+  .property-img {
+    width: 100%;
+    border-radius: 2rem 2rem 0 0;
+  }
+
+  .property-details {
+    text-transform: capitalize;
+    padding: 0 2.5rem;
+
+    h3 {
+      font-size: 2.2rem;
+      margin: 0.5rem 0;
+    }
+
+    span {
+      display: block;
+      font-size: 1.6rem;
+      color: $textGray;
+    }
+
+    span + span {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $orange;
+    }
+  }
+
+  .property-info {
+    @include flex(row, space-between, space-between);
+    gap: 3rem;
+
+    span {
+      @include flex(row);
+      display: block;
+      font-size: 1.6rem;
+      gap: 1.5rem;
+      padding: 1.5rem;
+
+      img {
+        height: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import "../variables";
+@import "../mixins";
+
+.add-property-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .form-container {
+    h2 {
+      text-align: center;
+    }
+
+    form {
+      @include flex(column, center, flex-start);
+      gap: 3rem;
+
+      .form-control {
+        @include flex(column, flex-start, flex-start);
+        gap: 0.8rem;
+        width: 100%;
+        font-size: 1.6rem;
+        font-family: $DMSans;
+
+        label {
+          font-weight: 700;
+        }
+
+        input {
+          display: block;
+          width: -webkit-fill-available;
+          //   width: -moz-fill-available;
+          padding: 1.5rem 1.5rem;
+          background-color: $backgroundGray;
+          border: 0.1rem solid #e6e6e6;
+          border-radius: 0.5rem;
+          font-size: 1.6rem;
+          font-family: $DMSans;
+          color: $textBlack;
+        }
+
+        select {
+          display: block;
+          width: 100%;
+          padding: 1.5rem 1.5rem;
+          border-radius: 0.5rem;
+          border: 0.1rem solid #e6e6e6;
+          background-color: $backgroundGray;
+          font-size: 1.6rem;
+          font-family: $DMSans;
+          color: $textBlack;
+        }
+
+        textarea {
+          display: block;
+          width: -webkit-fill-available;
+          padding: 1.5rem;
+          border: 0.1rem solid #e6e6e6;
+          background-color: $backgroundGray;
+          font-family: $DMSans;
+          font-size: 1.6rem;
+          color: $textBlack;
+        }
+      }
+
+      a {
+        width: 100%;
+        padding: 1.5rem 0;
+        border-radius: 1.3rem;
+        background-color: $orange;
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
+}

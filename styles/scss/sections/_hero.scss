@@ -1,0 +1,57 @@
+@import "../variables";
+@import "../mixins";
+
+#hero-section {
+  background: url(../../assets/img/etienne-beauregard-riverin.png) 50% 50%
+    no-repeat;
+  background-size: cover;
+  color: $textWhite;
+
+  header {
+    padding: 2rem 0;
+    @include flex(row, space-between);
+
+    ul {
+      display: none;
+    }
+  }
+
+  .hero-main {
+    padding: 5rem 0 8rem;
+
+    h1 {
+      font-size: 3.5rem;
+      text-transform: capitalize;
+    }
+
+    .location-search-container {
+      .map-img {
+        width: 100%;
+      }
+
+      .map-search-control {
+        @include flex(row, space-between);
+        width: 90%;
+        margin: auto;
+        padding: 1rem;
+        height: 4rem;
+        border-radius: 0.8rem;
+        background-color: $textWhite;
+
+        select {
+          width: 33.33%;
+          flex-grow: 1;
+          height: 100%;
+        }
+
+        a {
+          background-color: $backgroundBlue;
+          max-height: 100%;
+          padding: 1rem;
+          border-radius: 0 0.8rem 0.8rem 0;
+          @include flex();
+        }
+      }
+    }
+  }
+}

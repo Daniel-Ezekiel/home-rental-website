@@ -1,0 +1,67 @@
+@import "../variables";
+@import "../mixins";
+
+footer {
+  padding-top: 6rem;
+  @include flex();
+  gap: 2.5rem;
+
+  .main-footer-content {
+    @include flex(column, center, flex-start);
+    gap: 2.5rem;
+    padding: 1.2rem;
+
+    .footer-logo {
+      padding: 1.5rem;
+      background-color: $orange;
+      width: fit-content;
+      border-radius: 2rem;
+    }
+
+    .company-info {
+      @include flex(column, center, flex-start);
+      gap: 2rem;
+
+      div {
+        @include flex(row, flex-start, center);
+        gap: 2rem;
+
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+
+      .social-icons {
+        @include flex(row, flex-start, center);
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+    }
+  }
+
+  .footer-nav {
+    border-top: 1px solid rgba(123, 185, 252, 0.3);
+
+    padding: 1.2rem;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      @include flex(row, center, center);
+      flex-wrap: wrap;
+      gap: 1.8rem;
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+      }
+    }
+
+    p {
+      color: rgba(10, 20, 47, 0.5);
+      text-align: center;
+    }
+  }
+}

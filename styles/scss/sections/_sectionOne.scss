@@ -1,0 +1,42 @@
+@import "../variables";
+@import "../mixins";
+
+.key-features-section {
+  padding-top: 5rem;
+  @include flex(column, center, center);
+  gap: 2.5rem;
+
+  h2 {
+    font-size: 2.5rem;
+    text-decoration: underline;
+    text-decoration-color: $orange;
+  }
+
+  img[alt="feature-property"] {
+    display: none;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    @include flex(row);
+    flex-wrap: wrap;
+    gap: 1.8rem;
+
+    li {
+      width: 15rem;
+      height: 15rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      @include flex(column, start, start);
+
+      img {
+        height: 3rem;
+        background-color: #fff;
+        border-radius: 1rem;
+        padding: 1.2rem;
+        box-shadow: 0px 12px 19px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
