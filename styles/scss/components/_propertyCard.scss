@@ -59,3 +59,9 @@
     max-width: 30rem;
   }
 }
+
+@media screen and (min-width: 960px) {
+  .property {
+    max-width: 31%;
+  }
+}

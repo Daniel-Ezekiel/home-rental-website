@@ -84,3 +84,16 @@ footer {
     }
   }
 }
+
+@media screen and (min-width: 960px) {
+  footer {
+    width: 85rem;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  footer {
+    width: 120rem;
+  }
+}

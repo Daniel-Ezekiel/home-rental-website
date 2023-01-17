@@ -65,15 +65,26 @@
 
 @media screen and (min-width: 768px) {
   .hero-main {
-    max-width: 128rem;
+    max-width: 120rem;
 
     .hero-main-content {
-      @include flex(row, center, center);
+      @include flex(row, space-evenly, center);
 
       h1 {
-        width: 50%;
-        align-self: flex-start;
+        width: 40rem;
+      }
+
+      .location-search-container {
+        margin: 0;
       }
     }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  header,
+  .hero-main {
+    width: 120rem;
+    margin: auto;
   }
 }

@@ -77,3 +77,18 @@
     }
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .testimonials {
+    justify-content: flex-end;
+    gap: 3rem;
+
+    .testimonial-carousel {
+      width: 55rem;
+    }
+
+    .testimonial-video {
+      min-width: 50%;
+    }
+  }
+}

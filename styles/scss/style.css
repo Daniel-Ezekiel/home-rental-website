@@ -82,17 +82,26 @@ main > section h2 {
 }
 @media screen and (min-width: 768px) {
   .hero-main {
-    max-width: 128rem;
+    max-width: 120rem;
   }
   .hero-main .hero-main-content {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
   }
   .hero-main .hero-main-content h1 {
-    width: 50%;
-    align-self: flex-start;
+    width: 40rem;
+  }
+  .hero-main .hero-main-content .location-search-container {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header,
+.hero-main {
+    width: 120rem;
+    margin: auto;
   }
 }
 .key-features-section {
@@ -158,6 +167,31 @@ main > section h2 {
     width: 48%;
   }
 }
+@media screen and (min-width: 960px) {
+  .key-features-section {
+    width: 90rem;
+    margin: auto;
+  }
+  .key-features-section h2 {
+    width: 100%;
+  }
+  .key-features-section .feature-home {
+    width: 30rem;
+  }
+  .key-features-section .feature-home img[alt=feature-property] {
+    display: block;
+    border-radius: 5rem 0;
+    width: 100%;
+  }
+  .key-features-section ul {
+    width: 55rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .key-features-section {
+    width: 120rem;
+  }
+}
 .property {
   max-width: 34rem;
   display: flex;
@@ -217,6 +251,11 @@ main > section h2 {
     max-width: 30rem;
   }
 }
+@media screen and (min-width: 960px) {
+  .property {
+    max-width: 31%;
+  }
+}
 .properties-section {
   background-color: #f5f5f5;
   padding-top: 5rem;
@@ -239,6 +278,19 @@ main > section h2 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+@media screen and (min-width: 960px) {
+  .properties-section h2,
+.properties-section .properties-list {
+    width: 90rem;
+    margin: 3.5rem auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .properties-section h2,
+.properties-section .properties-list {
+    width: 120rem;
   }
 }
 .property-features-section {
@@ -313,7 +365,7 @@ main > section h2 {
   background-size: cover;
 }
 
-@media screen and (width: 768px) {
+@media screen and (min-width: 768px) {
   .property-features-section {
     display: flex;
     flex-direction: row;
@@ -331,17 +383,49 @@ main > section h2 {
     height: auto;
   }
 }
+@media screen and (min-width: 960px) {
+  .property-features-section {
+    width: 90rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+  .property-features-section .features-grid {
+    width: 50%;
+    height: auto;
+  }
+  .property-features-section .feature-details {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .property-features-section {
+    width: 120rem;
+  }
+}
 .add-property-section {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 .add-property-section p {
+  padding-bottom: 3rem;
   font-size: 1.6rem;
   font-weight: 500;
   text-align: center;
 }
+.add-property-section .form-container {
+  margin: 1rem;
+  padding: 2.5rem;
+  padding-bottom: 5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 63px rgba(0, 0, 0, 0.15);
+}
 .add-property-section .form-container h2 {
   text-align: center;
+  padding: 2rem 0;
 }
 .add-property-section .form-container form {
   display: flex;
@@ -421,6 +505,12 @@ main > section h2 {
     width: 100%;
   }
 }
+@media screen and (min-width: 1280px) {
+  .add-property-section {
+    width: 120rem;
+    margin: auto;
+  }
+}
 .testimonials {
   display: flex;
   flex-direction: column;
@@ -496,6 +586,18 @@ main > section h2 {
   }
   .testimonials .testimonial-carousel {
     width: 55%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .testimonials {
+    justify-content: flex-end;
+    gap: 3rem;
+  }
+  .testimonials .testimonial-carousel {
+    width: 55rem;
+  }
+  .testimonials .testimonial-video {
+    min-width: 50%;
   }
 }
 footer {
@@ -586,5 +688,16 @@ footer .footer-nav p {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+}
+@media screen and (min-width: 960px) {
+  footer {
+    width: 85rem;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  footer {
+    width: 120rem;
   }
 }/*# sourceMappingURL=style.css.map */
