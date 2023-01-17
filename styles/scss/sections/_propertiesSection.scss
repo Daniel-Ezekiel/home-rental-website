@@ -13,4 +13,18 @@
     @include flex();
     gap: 2.5rem;
   }
+
+  .pagination {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .properties-section {
+    .properties-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
 }

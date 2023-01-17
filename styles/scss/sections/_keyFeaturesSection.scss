@@ -3,6 +3,7 @@
 
 .key-features-section {
   padding-top: 5rem;
+  padding-bottom: 5rem;
   @include flex(column, center, center);
   gap: 2.5rem;
 
@@ -28,7 +29,7 @@
       height: 15rem;
       font-size: 1.6rem;
       font-weight: 600;
-      @include flex(column, start, start);
+      @include flex(column, flex-start, flex-start);
 
       img {
         height: 3rem;
@@ -37,6 +38,27 @@
         padding: 1.2rem;
         box-shadow: 0px 12px 19px rgba(0, 0, 0, 0.15);
       }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .key-features-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .feature-home {
+      width: 48%;
+
+      img[alt="feature-property"] {
+        display: block;
+        border-radius: 5rem 0;
+        width: 100%;
+      }
+    }
+
+    ul {
+      width: 48%;
     }
   }
 }

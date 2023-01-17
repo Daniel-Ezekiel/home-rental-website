@@ -9,7 +9,7 @@
   font-size: 1.6rem;
 
   .feature-details {
-    @include flex(column, start, start);
+    @include flex(column, flex-start, flex-start);
     gap: 1.5rem;
 
     h2 {
@@ -37,6 +37,7 @@
       "c d d d"
       "c d d d";
     gap: 1.5rem;
+    max-width: 37rem;
 
     div {
       height: 18rem;
@@ -72,6 +73,24 @@
       grid-area: d;
       background: url(../../../assets/img/feature4.png) 50% 50% no-repeat;
       background-size: cover;
+    }
+  }
+}
+
+@media screen and (width: 768px) {
+  .property-features-section {
+    @include flex(row, flex-start, center);
+    flex-wrap: wrap;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    .feature-details {
+      width: 48%;
+    }
+
+    .features-grid {
+      width: 47%;
+      height: auto;
     }
   }
 }

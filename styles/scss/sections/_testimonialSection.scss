@@ -10,6 +10,14 @@
   .testimonial-carousel {
     @include flex(column, center, flex-start);
     gap: 2rem;
+    position: relative;
+
+    .quotation-mark {
+      position: absolute;
+      top: 0;
+      margin-top: -2rem;
+      z-index: -1;
+    }
 
     .client-info {
       @include flex(row, flex-start, center);
@@ -54,6 +62,18 @@
       padding: 2rem;
       border-radius: 50%;
       background: $orange;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials {
+    margin: 7rem 0;
+    padding-top: 0;
+    flex-direction: row;
+
+    .testimonial-carousel {
+      width: 55%;
     }
   }
 }

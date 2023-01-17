@@ -2,9 +2,13 @@
 @import "../mixins";
 
 footer {
-  padding-top: 6rem;
+  padding: 6rem 1.5rem 0;
   @include flex();
   gap: 2.5rem;
+
+  section {
+    width: 100%;
+  }
 
   .main-footer-content {
     @include flex(column, center, flex-start);
@@ -62,6 +66,21 @@ footer {
     p {
       color: rgba(10, 20, 47, 0.5);
       text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    .main-footer-content {
+      border-top: 2px solid $orange;
+      padding-top: 8rem;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .footer-nav {
+      width: max-content;
     }
   }
 }

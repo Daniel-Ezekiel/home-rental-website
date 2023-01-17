@@ -14,7 +14,7 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Inter:wght@400;500;600;700&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href="styles/css/style.css">
+	<link rel="stylesheet" href="styles/scss/style.css">
 </head>
 
 <body>
@@ -63,7 +63,9 @@
 		<section class="key-features-section">
 			<h2>Minimum living cost takes care of everything</h2>
 
-			<img src="./assets/img/feature-home.png" alt="feature-property">
+			<div class="feature-home">
+				<img src="./assets/img/feature-home.png" alt="feature-property">
+			</div>
 
 			<ul>
 				<li>
@@ -350,7 +352,7 @@
 						<input id="price" type="text" name="Price" placeholder="Enter Price">
 					</div>
 
-					<div class="form-control">
+					<div class="form-control textarea-control">
 						<label for="description">Description</label>
 						<textarea name="Description" id="description" cols="30" rows="10"></textarea>
 					</div>

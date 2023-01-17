@@ -81,3 +81,21 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  .add-property-section {
+    .form-container {
+      form {
+        @include flex(row, space-between, center);
+        flex-wrap: wrap;
+
+        .form-control {
+          width: 47%;
+        }
+        .textarea-control {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
