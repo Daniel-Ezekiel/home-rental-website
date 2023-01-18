@@ -1,2 +1,13 @@
 @import "../variables";
 @import "../mixins";
+@import "../components/nav";
+
+header {
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 1280px) {
+  header {
+    width: 120rem;
+  }
+}

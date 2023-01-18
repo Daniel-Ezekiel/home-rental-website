@@ -7,15 +7,6 @@
   background-size: cover;
   color: $textWhite;
 
-  header {
-    padding: 2rem 0;
-    @include flex(row, space-between);
-
-    ul {
-      display: none;
-    }
-  }
-
   .hero-main {
     padding: 5rem 0 8rem;
 
@@ -86,13 +77,8 @@
     height: 80vh;
     @include flex(column, flex-start, center);
 
-    header,
     .hero-main {
       width: 120rem;
-    }
-
-    .hero-main {
-      // justify-self: center;
       margin: auto;
 
       h1 {
