@@ -112,5 +112,31 @@
   .add-property-section {
     width: 120rem;
     margin: auto;
+
+    p {
+      font-size: 2.4rem;
+    }
+
+    .form-container {
+      h2 {
+        color: $orange;
+        text-decoration: none;
+      }
+
+      form {
+        justify-content: flex-start;
+
+        .form-control {
+          width: 31.5%;
+
+          label {
+            font-size: 1.7rem;
+          }
+        }
+        .textarea-control {
+          width: 100%;
+        }
+      }
+    }
   }
 }

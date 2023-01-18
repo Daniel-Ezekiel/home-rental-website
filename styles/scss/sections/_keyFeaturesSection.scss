@@ -8,7 +8,6 @@
   gap: 2.5rem;
 
   h2 {
-    font-size: 2.5rem;
     text-decoration: underline;
     text-decoration-color: $orange;
   }
@@ -90,6 +89,23 @@
 
 @media screen and (min-width: 1280px) {
   .key-features-section {
+    justify-content: space-around;
+    gap: 2rem;
     width: 120rem;
+
+    .feature-home {
+      width: 38rem;
+    }
+
+    ul {
+      width: 65rem;
+      gap: 2.5rem;
+
+      li {
+        width: 20rem;
+        height: 20rem;
+        font-size: 2.4rem;
+      }
+    }
   }
 }

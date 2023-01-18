@@ -5,12 +5,13 @@ footer {
   padding: 6rem 1.5rem 0;
   @include flex();
   gap: 2.5rem;
+  font-size: 1.4rem;
 
   section {
     width: 100%;
   }
 
-  .main-footer-content {
+  .logo-and-content {
     @include flex(column, center, flex-start);
     gap: 2.5rem;
     padding: 1.2rem;
@@ -72,15 +73,40 @@ footer {
 
 @media screen and (min-width: 768px) {
   footer {
+    gap: 12rem;
     .main-footer-content {
       border-top: 2px solid $orange;
-      padding-top: 8rem;
-      flex-direction: row;
-      justify-content: space-around;
+
+      .logo-and-content {
+        max-width: 100rem;
+        margin: auto;
+        padding-top: 12rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 6rem;
+
+        .company-info {
+          @include flex(row, space-between, center);
+          flex-wrap: wrap;
+          width: 50rem;
+
+          div {
+            width: 100%;
+          }
+
+          div + div {
+            width: 48%;
+          }
+
+          .social-icons {
+            width: 100%;
+          }
+        }
+      }
     }
 
     .footer-nav {
-      width: max-content;
+      max-width: 100rem;
     }
   }
 }
@@ -95,5 +121,9 @@ footer {
 @media screen and (min-width: 1280px) {
   footer {
     width: 120rem;
+
+    .footer-nav {
+      @include flex(row, space-between, center);
+    }
   }
 }

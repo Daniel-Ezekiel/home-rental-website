@@ -10,3 +10,11 @@ main > section {
     text-decoration-color: $orange;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  main > section {
+    h2 {
+      font-size: 3.2rem;
+    }
+  }
+}

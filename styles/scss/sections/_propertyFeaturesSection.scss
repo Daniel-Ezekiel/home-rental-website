@@ -6,7 +6,6 @@
   gap: 3rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  font-size: 1.6rem;
 
   .feature-details {
     @include flex(column, flex-start, flex-start);
@@ -116,5 +115,53 @@
 @media screen and (min-width: 1280px) {
   .property-features-section {
     width: 120rem;
+    justify-content: space-evenly;
+
+    .features-grid {
+      font-size: 2.4rem;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-areas:
+        "a a a b b b"
+        "a a a b b b"
+        "a a a b b b"
+        "c c d d d d"
+        "c c d d d d"
+        "c c d d d d";
+      gap: 1.5rem;
+      min-width: 42rem;
+
+      div {
+        height: 24rem;
+      }
+
+      .feature-bg1 {
+        width: 22.5rem;
+      }
+
+      .feature-bg2 {
+        height: 22rem;
+        margin-right: 1.7rem;
+      }
+
+      .feature-bg3 {
+        height: 22rem;
+        min-width: 15rem;
+      }
+
+      .feature-bg4 {
+        min-width: 25rem;
+      }
+    }
+  }
+
+  .feature-details {
+    h2 {
+      font-size: 3.6rem;
+    }
+
+    p {
+      line-height: 3.2rem;
+    }
   }
 }

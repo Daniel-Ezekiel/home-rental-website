@@ -11,6 +11,11 @@ body {
   line-height: 1.5;
 }
 
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 1.8rem;
+  }
+}
 main > section {
   padding: 1.2rem;
 }
@@ -21,6 +26,11 @@ main > section h2 {
           text-decoration-color: #f4511e;
 }
 
+@media screen and (min-width: 1280px) {
+  main > section h2 {
+    font-size: 3.2rem;
+  }
+}
 #hero-section {
   background: url(../../assets/img/etienne-beauregard-riverin.png) 50% 50% no-repeat;
   background-size: cover;
@@ -98,10 +108,23 @@ main > section h2 {
   }
 }
 @media screen and (min-width: 1280px) {
-  header,
-.hero-main {
+  #hero-section {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #hero-section header,
+#hero-section .hero-main {
     width: 120rem;
+  }
+  #hero-section .hero-main {
     margin: auto;
+  }
+  #hero-section .hero-main h1 {
+    width: 55rem;
+    font-size: 4.8rem;
   }
 }
 .key-features-section {
@@ -114,7 +137,6 @@ main > section h2 {
   gap: 2.5rem;
 }
 .key-features-section h2 {
-  font-size: 2.5rem;
   text-decoration: underline;
   -webkit-text-decoration-color: #f4511e;
           text-decoration-color: #f4511e;
@@ -189,7 +211,21 @@ main > section h2 {
 }
 @media screen and (min-width: 1280px) {
   .key-features-section {
+    justify-content: space-around;
+    gap: 2rem;
     width: 120rem;
+  }
+  .key-features-section .feature-home {
+    width: 38rem;
+  }
+  .key-features-section ul {
+    width: 65rem;
+    gap: 2.5rem;
+  }
+  .key-features-section ul li {
+    width: 20rem;
+    height: 20rem;
+    font-size: 2.4rem;
   }
 }
 .property {
@@ -301,7 +337,6 @@ main > section h2 {
   gap: 3rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  font-size: 1.6rem;
 }
 .property-features-section .feature-details {
   display: flex;
@@ -404,6 +439,38 @@ main > section h2 {
 @media screen and (min-width: 1280px) {
   .property-features-section {
     width: 120rem;
+    justify-content: space-evenly;
+  }
+  .property-features-section .features-grid {
+    font-size: 2.4rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "a a a b b b" "a a a b b b" "a a a b b b" "c c d d d d" "c c d d d d" "c c d d d d";
+    gap: 1.5rem;
+    min-width: 42rem;
+  }
+  .property-features-section .features-grid div {
+    height: 24rem;
+  }
+  .property-features-section .features-grid .feature-bg1 {
+    width: 22.5rem;
+  }
+  .property-features-section .features-grid .feature-bg2 {
+    height: 22rem;
+    margin-right: 1.7rem;
+  }
+  .property-features-section .features-grid .feature-bg3 {
+    height: 22rem;
+    min-width: 15rem;
+  }
+  .property-features-section .features-grid .feature-bg4 {
+    min-width: 25rem;
+  }
+  .feature-details h2 {
+    font-size: 3.6rem;
+  }
+  .feature-details p {
+    line-height: 3.2rem;
   }
 }
 .add-property-section {
@@ -510,6 +577,25 @@ main > section h2 {
     width: 120rem;
     margin: auto;
   }
+  .add-property-section p {
+    font-size: 2.4rem;
+  }
+  .add-property-section .form-container h2 {
+    color: #f4511e;
+    text-decoration: none;
+  }
+  .add-property-section .form-container form {
+    justify-content: flex-start;
+  }
+  .add-property-section .form-container form .form-control {
+    width: 31.5%;
+  }
+  .add-property-section .form-container form .form-control label {
+    font-size: 1.7rem;
+  }
+  .add-property-section .form-container form .textarea-control {
+    width: 100%;
+  }
 }
 .testimonials {
   display: flex;
@@ -596,6 +682,10 @@ main > section h2 {
   .testimonials .testimonial-carousel {
     width: 55rem;
   }
+  .testimonials .testimonial-carousel p {
+    font-size: 2.1rem;
+    line-height: 3.6rem;
+  }
   .testimonials .testimonial-video {
     min-width: 50%;
   }
@@ -607,11 +697,12 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
+  font-size: 1.4rem;
 }
 footer section {
   width: 100%;
 }
-footer .main-footer-content {
+footer .logo-and-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -619,7 +710,7 @@ footer .main-footer-content {
   gap: 2.5rem;
   padding: 1.2rem;
 }
-footer .main-footer-content .footer-logo {
+footer .logo-and-content .footer-logo {
   padding: 1.5rem;
   background-color: #f4511e;
   width: -webkit-fit-content;
@@ -627,25 +718,25 @@ footer .main-footer-content .footer-logo {
   width: fit-content;
   border-radius: 2rem;
 }
-footer .main-footer-content .company-info {
+footer .logo-and-content .company-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 2rem;
 }
-footer .main-footer-content .company-info div {
+footer .logo-and-content .company-info div {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
 }
-footer .main-footer-content .company-info div img {
+footer .logo-and-content .company-info div img {
   width: 2rem;
   height: 2rem;
 }
-footer .main-footer-content .company-info .social-icons {
+footer .logo-and-content .company-info .social-icons {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -678,16 +769,39 @@ footer .footer-nav p {
 }
 
 @media screen and (min-width: 768px) {
+  footer {
+    gap: 12rem;
+  }
   footer .main-footer-content {
     border-top: 2px solid #f4511e;
-    padding-top: 8rem;
+  }
+  footer .main-footer-content .logo-and-content {
+    max-width: 100rem;
+    margin: auto;
+    padding-top: 12rem;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 6rem;
+  }
+  footer .main-footer-content .logo-and-content .company-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50rem;
+  }
+  footer .main-footer-content .logo-and-content .company-info div {
+    width: 100%;
+  }
+  footer .main-footer-content .logo-and-content .company-info div + div {
+    width: 48%;
+  }
+  footer .main-footer-content .logo-and-content .company-info .social-icons {
+    width: 100%;
   }
   footer .footer-nav {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+    max-width: 100rem;
   }
 }
 @media screen and (min-width: 960px) {
@@ -699,5 +813,11 @@ footer .footer-nav p {
 @media screen and (min-width: 1280px) {
   footer {
     width: 120rem;
+  }
+  footer .footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */
