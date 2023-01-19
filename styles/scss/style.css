@@ -59,9 +59,17 @@ main > section h2 {
   background-color: #fff;
 }
 #hero-section .hero-main .location-search-container .map-search-control select {
+  background-color: #f9f9f9;
+  border-color: #e6e6e6;
+  padding: 1rem 0.8rem;
+  border-radius: 0.8rem 0 0 0.8rem;
   width: 33.33%;
   flex-grow: 1;
   height: 100%;
+  font-family: "DM Sans", sans-serif;
+}
+#hero-section .hero-main .location-search-container .map-search-control select + select {
+  border-radius: 0;
 }
 #hero-section .hero-main .location-search-container .map-search-control a {
   background-color: #23a6f0;
@@ -382,18 +390,17 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: space-between;
-  gap: 3rem;
+  align-items: center;
+  width: 100%;
+  border-top: 0.1rem solid #e6e6e6;
 }
 .property .property-info span {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   display: block;
-  font-size: 1.6rem;
-  gap: 1.5rem;
+  border-right: 0.1rem solid #e6e6e6;
   padding: 1.5rem;
+  width: 33.3333%;
+  font-size: 1.6rem;
+  text-align: center;
 }
 .property .property-info span img {
   height: 2rem;

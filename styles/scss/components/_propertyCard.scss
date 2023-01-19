@@ -1,5 +1,5 @@
-@import "../variables";
-@import "../mixins";
+@import '../variables';
+@import '../mixins';
 
 .property {
   max-width: 34rem;
@@ -37,15 +37,17 @@
   }
 
   .property-info {
-    @include flex(row, space-between, space-between);
-    gap: 3rem;
+    @include flex(row, space-between, center);
+    width: 100%;
+    border-top: 0.1rem solid #e6e6e6;
 
     span {
-      @include flex(row);
       display: block;
-      font-size: 1.6rem;
-      gap: 1.5rem;
+      border-right: 0.1rem solid #e6e6e6;
       padding: 1.5rem;
+      width: 33.3333%;
+      font-size: 1.6rem;
+      text-align: center;
 
       img {
         height: 2rem;

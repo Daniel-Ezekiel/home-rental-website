@@ -1,5 +1,5 @@
-@import "../variables";
-@import "../mixins";
+@import '../variables';
+@import '../mixins';
 
 #hero-section {
   background: url(../../assets/img/etienne-beauregard-riverin.png) 50% 50%
@@ -30,9 +30,19 @@
         background-color: $textWhite;
 
         select {
+          background-color: #f9f9f9;
+          border-color: #e6e6e6;
+          padding: 1rem 0.8rem;
+          border-radius: 0.8rem 0 0 0.8rem;
           width: 33.33%;
           flex-grow: 1;
           height: 100%;
+
+          font-family: $DMSans;
+        }
+
+        select + select {
+          border-radius: 0;
         }
 
         a {
