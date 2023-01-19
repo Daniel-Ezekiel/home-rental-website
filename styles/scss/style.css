@@ -721,52 +721,92 @@ header {
     width: 100%;
   }
 }
-.testimonials {
+.testimonial-carousel {
+  width: 100%;
+  overflow-x: hidden;
+}
+.testimonial-carousel .swiper-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  gap: 2.8rem;
-  padding-top: 5rem;
-  background-color: rgba(244, 81, 30, 0.07);
 }
-.testimonials .testimonial-carousel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
+.testimonial-carousel .swiper-wrapper .swiper-slide {
   position: relative;
+  min-width: 100%;
 }
-.testimonials .testimonial-carousel .quotation-mark {
+.testimonial-carousel .swiper-wrapper .swiper-slide .quotation-mark {
   position: absolute;
   top: 0;
-  margin-top: -2rem;
   z-index: -1;
 }
-.testimonials .testimonial-carousel .client-info {
+.testimonial-carousel .swiper-wrapper .swiper-slide .client-info {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 1.2rem;
 }
-.testimonials .testimonial-carousel .client-info div {
+.testimonial-carousel .swiper-wrapper .swiper-slide .client-info div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 0.4rem;
 }
-.testimonials .testimonial-carousel .client-info div span {
+.testimonial-carousel .swiper-wrapper .swiper-slide .client-info div span {
   font-size: 1.8rem;
   font-weight: 700;
   color: #f4511e;
 }
-.testimonials .testimonial-carousel .client-info div span + span {
+.testimonial-carousel .swiper-wrapper .swiper-slide .client-info div span + span {
   font-size: 1.6rem;
   color: #18191f;
   font-weight: 400;
+}
+.testimonial-carousel .swiper-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  height: 2rem;
+}
+.testimonial-carousel .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #f4511e;
+}
+.testimonial-carousel .swiper-pagination span {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: rgba(244, 81, 30, 0.5);
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial-carousel {
+    width: 55%;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .testimonial-carousel {
+    width: 55rem;
+  }
+  .testimonial-carousel .testimonial p {
+    font-size: 2.1rem;
+    line-height: 3.6rem;
+  }
+}
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4.8rem;
+  padding-top: 5rem;
+  background-color: rgba(244, 81, 30, 0.07);
 }
 .testimonials .testimonial-video {
   position: relative;
@@ -794,21 +834,11 @@ header {
     padding-top: 0;
     flex-direction: row;
   }
-  .testimonials .testimonial-carousel {
-    width: 55%;
-  }
 }
 @media screen and (min-width: 1280px) {
   .testimonials {
     justify-content: flex-end;
     gap: 3rem;
-  }
-  .testimonials .testimonial-carousel {
-    width: 55rem;
-  }
-  .testimonials .testimonial-carousel p {
-    font-size: 2.1rem;
-    line-height: 3.6rem;
   }
   .testimonials .testimonial-video {
     min-width: 50%;

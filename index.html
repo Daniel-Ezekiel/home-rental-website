@@ -373,24 +373,76 @@
 		</section>
 
 		<section class="testimonials">
-			<div class="testimonial-carousel">
-				<img src="./assets/icons/quote.png" alt="icon" class="quotation-mark">
+			<!-- Testimonial Swiper Carousel -->
+			<div class="swiper testimonial-carousel">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide testimonial">
+						<img src="./assets/icons/quote.png" alt="icon" class="quotation-mark">
 
-				<p class="testimonial-text">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum nisl et nunc facilisis, a
-					commodo eros mollis. Nunc vel pellentesque est. Curabitur at odio sit amet libero vulputate
-					efficitur ac nec justo. Nulla vitae mauris quam. Nulla quam massa, faucibus id pretium ac, mattis eu
-					velit. Donec sed risus a lacus fringilla finibus.
-				</p>
+						<p class="testimonial-text">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum nisl et nunc
+							facilisis, a
+							commodo eros mollis. Nunc vel pellentesque est. Curabitur at odio sit amet libero vulputate
+							efficitur ac nec justo. Nulla vitae mauris quam. Nulla quam massa, faucibus id pretium ac,
+							mattis eu
+							velit. Donec sed risus a lacus fringilla finibus.
+						</p>
 
-				<div class="client-info">
-					<img src="./assets/img/client.png" alt="avatar" class="profile-img">
+						<div class="client-info">
+							<img src="./assets/img/client.png" alt="avatar" class="profile-img">
 
-					<div>
-						<span class="client-name">Harry Wilson</span>
-						<span class="client-title">Property Owner</span>
+							<div>
+								<span class="client-name">Harry Wilson</span>
+								<span class="client-title">Property Owner</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide testimonial">
+						<img src="./assets/icons/quote.png" alt="icon" class="quotation-mark">
+
+						<p class="testimonial-text">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum nisl et nunc
+							facilisis, a
+							commodo eros mollis. Nunc vel pellentesque est. Curabitur at odio sit amet libero vulputate
+							efficitur ac nec justo. Nulla vitae mauris quam. Nulla quam massa, faucibus id pretium ac,
+							mattis eu
+							velit. Donec sed risus a lacus fringilla finibus.
+						</p>
+
+						<div class="client-info">
+							<img src="./assets/img/client.png" alt="avatar" class="profile-img">
+
+							<div>
+								<span class="client-name">Harry Wilson</span>
+								<span class="client-title">Property Owner</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide testimonial">
+						<img src="./assets/icons/quote.png" alt="icon" class="quotation-mark">
+
+						<p class="testimonial-text">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum nisl et nunc
+							facilisis, a
+							commodo eros mollis. Nunc vel pellentesque est. Curabitur at odio sit amet libero vulputate
+							efficitur ac nec justo. Nulla vitae mauris quam. Nulla quam massa, faucibus id pretium ac,
+							mattis eu
+							velit. Donec sed risus a lacus fringilla finibus.
+						</p>
+
+						<div class="client-info">
+							<img src="./assets/img/client.png" alt="avatar" class="profile-img">
+
+							<div>
+								<span class="client-name">Harry Wilson</span>
+								<span class="client-title">Property Owner</span>
+							</div>
+						</div>
 					</div>
 				</div>
+				<div class="swiper-pagination"></div>
 			</div>
 
 			<div class="testimonial-video">
@@ -454,6 +506,19 @@
 	</footer>
 
 	<script type="text/javascript" src="js/script.js"></script>
+
+	<!-- Swiper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper(".testimonial-carousel", {
+			pagination: {
+				el: ".swiper-pagination",
+				type: 'bullets',
+			},
+		});
+	</script>
 </body>
 
 </html>

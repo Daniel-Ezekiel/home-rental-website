@@ -1,46 +1,13 @@
-@import "../variables";
-@import "../mixins";
+@import '../variables';
+@import '../mixins';
+
+@import '../components/testimonialCarousel';
 
 .testimonials {
   @include flex();
-  gap: 2.8rem;
+  gap: 4.8rem;
   padding-top: 5rem;
   background-color: $backgroundOrange;
-
-  .testimonial-carousel {
-    @include flex(column, center, flex-start);
-    gap: 2rem;
-    position: relative;
-
-    .quotation-mark {
-      position: absolute;
-      top: 0;
-      margin-top: -2rem;
-      z-index: -1;
-    }
-
-    .client-info {
-      @include flex(row, flex-start, center);
-      gap: 1.2rem;
-
-      div {
-        @include flex(column, center, flex-start);
-        gap: 0.4rem;
-
-        span {
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: $orange;
-        }
-
-        span + span {
-          font-size: 1.6rem;
-          color: $textBlack;
-          font-weight: 400;
-        }
-      }
-    }
-  }
 
   .testimonial-video {
     position: relative;
@@ -71,10 +38,6 @@
     margin: 7rem 0;
     padding-top: 0;
     flex-direction: row;
-
-    .testimonial-carousel {
-      width: 55%;
-    }
   }
 }
 
@@ -82,15 +45,6 @@
   .testimonials {
     justify-content: flex-end;
     gap: 3rem;
-
-    .testimonial-carousel {
-      width: 55rem;
-
-      p {
-        font-size: 2.1rem;
-        line-height: 3.6rem;
-      }
-    }
 
     .testimonial-video {
       min-width: 50%;
