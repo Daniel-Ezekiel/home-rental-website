@@ -1,11 +1,11 @@
-@import "../variables";
-@import "../mixins";
+@import '../variables';
+@import '../mixins';
 
 .add-property-section {
   padding-top: 5rem;
   padding-bottom: 5rem;
 
-  p {
+  .tagline {
     padding-bottom: 3rem;
     font-size: 1.6rem;
     font-weight: 500;
@@ -42,7 +42,6 @@
         input {
           display: block;
           width: -webkit-fill-available;
-          //   width: -moz-fill-available;
           padding: 1.5rem 1.5rem;
           background-color: $backgroundGray;
           border: 0.1rem solid #e6e6e6;
@@ -73,6 +72,27 @@
           font-family: $DMSans;
           font-size: 1.6rem;
           color: $textBlack;
+        }
+
+        .upload-container {
+          @include flex();
+          gap: 1.2rem;
+          width: -webkit-fill-available;
+          border-radius: 1rem;
+          padding: 2rem 1.3rem;
+          border: 0.2rem dashed $orange;
+          background-color: rgba(244, 81, 30, 0.01);
+          text-align: center;
+
+          p {
+            margin: 0;
+            font-weight: 700;
+            color: $orange;
+          }
+        }
+
+        input[type='file'] {
+          display: none;
         }
       }
 

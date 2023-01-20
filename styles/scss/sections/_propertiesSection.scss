@@ -1,21 +1,84 @@
-@import "../variables";
-@import "../mixins";
-@import "../components/propertyCard";
+@import '../variables';
+@import '../mixins';
+@import '../components/propertyCard';
 
 .properties-section {
   background-color: #f5f5f5;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  //   @include flex(column, center, center);
-  gap: 2.5rem;
+  @include flex(column, center, center);
+  gap: 4.5rem;
+
+  .h2-and-btn {
+    @include flex(row, space-between, center);
+    width: 100%;
+    align-self: flex-start;
+
+    h2 {
+      margin: 0.5rem 0;
+    }
+
+    a {
+      background-color: $orange;
+      padding: 1rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 1.5rem;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
 
   .properties-list {
     @include flex();
     gap: 2.5rem;
   }
 
-  .pagination {
-    width: 100%;
+  .properties-pagination {
+    @include flex(row);
+    height: 6rem;
+    width: fit-content;
+    border-radius: 0.8rem;
+    border: 0.1rem solid #bdbdbd;
+    overflow: hidden;
+
+    button {
+      margin: 0;
+      height: 100%;
+      border: none;
+      border-right: 1px solid #e1e1e1;
+      border-radius: 0;
+      outline: 0;
+      background-color: #fff;
+      font-family: $DMSans;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: $orange;
+
+      &:first-child,
+      &:last-child {
+        padding: 0 2rem;
+      }
+
+      &:first-child {
+        color: #bdbdbd;
+        background-color: initial;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        padding: 0 1.5rem;
+      }
+
+      &:nth-child(2) {
+        background-color: $orange;
+        color: #fff;
+      }
+    }
   }
 }
 
@@ -31,17 +94,24 @@
 
 @media screen and (min-width: 960px) {
   .properties-section {
-    h2,
+    .h2-and-btn,
     .properties-list {
       width: 90rem;
       margin: 3.5rem auto;
+    }
+
+    .h2-and-btn {
+      a {
+        padding: 1.5rem 1.5rem;
+        font-size: 1.8rem;
+      }
     }
   }
 }
 
 @media screen and (min-width: 1280px) {
   .properties-section {
-    h2,
+    .h2-and-btn,
     .properties-list {
       width: 120rem;
     }

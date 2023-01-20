@@ -99,7 +99,11 @@
 		</section>
 
 		<section class="properties-section">
-			<h2>List of Properties</h2>
+			<div class="h2-and-btn">
+				<h2>List of Properties</h2>
+
+				<a href="#">View All Property</a>
+			</div>
 
 			<div class="properties-list">
 				<div class="property">
@@ -269,10 +273,14 @@
 						</span>
 					</div>
 				</div>
+			</div>
 
-				<div class="pagination">
-
-				</div>
+			<div class="properties-pagination">
+				<button class="btn-pagination" type="button" disabled>First</button>
+				<button class="btn-pagination" type="button">1</button>
+				<button class="btn-pagination" type="button">2</button>
+				<button class="btn-pagination" type="button">3</button>
+				<button class="btn-pagination" type="button">Last</button>
 			</div>
 		</section>
 
@@ -306,7 +314,7 @@
 		</section>
 
 		<section class="add-property-section">
-			<p>
+			<p class="tagline">
 				Your property with us and be Confident that Your Room will be Filled Out!
 			</p>
 
@@ -365,6 +373,17 @@
 					<div class="form-control textarea-control">
 						<label for="description">Description</label>
 						<textarea name="Description" id="description" cols="30" rows="10"></textarea>
+					</div>
+
+					<div class="form-control upload-photos-control">
+						<label for="file-upload">Upload Photos</label>
+
+						<div class="upload-container">
+							<p>Drag your images here, or browse</p>
+							<span>Supported: JPG, JPEG, PNG</span>
+						</div>
+
+						<input id="file-upload" type="file" name="file">
 					</div>
 
 					<a href="#">Add New Property</a>

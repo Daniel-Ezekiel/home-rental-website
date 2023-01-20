@@ -165,6 +165,7 @@ nav .hamburger {
   width: 3rem;
   height: 0.3rem;
   position: relative;
+  transition: all 0.4s ease-in-out;
   cursor: pointer;
   z-index: 2;
 }
@@ -178,6 +179,7 @@ nav .hamburger::before {
   border-radius: 3rem;
   width: 2.2rem;
   height: 0.3rem;
+  transition: all 0.4s ease-in-out;
 }
 nav .hamburger::after {
   content: "";
@@ -189,6 +191,7 @@ nav .hamburger::after {
   border-radius: 3rem;
   width: 2.2rem;
   height: 0.3rem;
+  transition: all 0.4s ease-in-out;
 }
 nav .hamburger.active {
   visibility: hidden;
@@ -420,7 +423,30 @@ header {
   background-color: #f5f5f5;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  gap: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4.5rem;
+}
+.properties-section .h2-and-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  align-self: flex-start;
+}
+.properties-section .h2-and-btn h2 {
+  margin: 0.5rem 0;
+}
+.properties-section .h2-and-btn a {
+  background-color: #f4511e;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
 }
 .properties-section .properties-list {
   display: flex;
@@ -429,8 +455,48 @@ header {
   align-items: center;
   gap: 2.5rem;
 }
-.properties-section .pagination {
-  width: 100%;
+.properties-section .properties-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0.8rem;
+  border: 0.1rem solid #bdbdbd;
+  overflow: hidden;
+}
+.properties-section .properties-pagination button {
+  margin: 0;
+  height: 100%;
+  border: none;
+  border-right: 1px solid #e1e1e1;
+  border-radius: 0;
+  outline: 0;
+  background-color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f4511e;
+}
+.properties-section .properties-pagination button:first-child, .properties-section .properties-pagination button:last-child {
+  padding: 0 2rem;
+}
+.properties-section .properties-pagination button:first-child {
+  color: #bdbdbd;
+  background-color: initial;
+}
+.properties-section .properties-pagination button:last-child {
+  border-right: 0;
+}
+.properties-section .properties-pagination button:nth-child(2), .properties-section .properties-pagination button:nth-child(3), .properties-section .properties-pagination button:nth-child(4) {
+  padding: 0 1.5rem;
+}
+.properties-section .properties-pagination button:nth-child(2) {
+  background-color: #f4511e;
+  color: #fff;
 }
 
 @media screen and (min-width: 640px) {
@@ -441,14 +507,18 @@ header {
   }
 }
 @media screen and (min-width: 960px) {
-  .properties-section h2,
+  .properties-section .h2-and-btn,
 .properties-section .properties-list {
     width: 90rem;
     margin: 3.5rem auto;
   }
+  .properties-section .h2-and-btn a {
+    padding: 1.5rem 1.5rem;
+    font-size: 1.8rem;
+  }
 }
 @media screen and (min-width: 1280px) {
-  .properties-section h2,
+  .properties-section .h2-and-btn,
 .properties-section .properties-list {
     width: 120rem;
   }
@@ -601,7 +671,7 @@ header {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-.add-property-section p {
+.add-property-section .tagline {
   padding-bottom: 3rem;
   font-size: 1.6rem;
   font-weight: 500;
@@ -669,6 +739,27 @@ header {
   font-family: "DM Sans", sans-serif;
   font-size: 1.6rem;
   color: #18191f;
+}
+.add-property-section .form-container form .form-control .upload-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  width: -webkit-fill-available;
+  border-radius: 1rem;
+  padding: 2rem 1.3rem;
+  border: 0.2rem dashed #f4511e;
+  background-color: rgba(244, 81, 30, 0.01);
+  text-align: center;
+}
+.add-property-section .form-container form .form-control .upload-container p {
+  margin: 0;
+  font-weight: 700;
+  color: #f4511e;
+}
+.add-property-section .form-container form .form-control input[type=file] {
+  display: none;
 }
 .add-property-section .form-container form a {
   width: 100%;
