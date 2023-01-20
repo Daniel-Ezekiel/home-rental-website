@@ -1,9 +1,10 @@
-@import "../variables";
-@import "../mixins";
-@import "../components/nav";
+@import '../variables';
+@import '../mixins';
+@import '../components/nav';
 
 header {
   padding: 2rem 0;
+  font-family: $DMSans;
 }
 
 @media screen and (min-width: 1280px) {

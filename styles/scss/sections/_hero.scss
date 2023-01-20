@@ -38,7 +38,8 @@
           flex-grow: 1;
           height: 100%;
 
-          font-family: $DMSans;
+          font-family: $Poppins;
+          font-weight: 500;
         }
 
         select + select {
@@ -51,6 +52,10 @@
           padding: 1rem;
           border-radius: 0 0.8rem 0.8rem 0;
           @include flex();
+
+          img {
+            height: 2rem;
+          }
         }
       }
     }

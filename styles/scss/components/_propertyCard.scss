@@ -6,8 +6,14 @@
   @include flex();
   gap: 2rem;
   border: 0.1rem solid #979797;
-  border-radius: 2rem;
+  border-radius: 2.5rem;
   background-color: #fff;
+
+  &:hover {
+    border: none;
+    box-shadow: 0px 34.0693px 36.1986px rgba(0, 0, 0, 0.133714);
+    transition: all 0.4s ease-in-out;
+  }
 
   .property-img {
     width: 100%;
@@ -26,7 +32,7 @@
     span {
       display: block;
       font-size: 1.6rem;
-      color: $textGray;
+      color: #818181;
     }
 
     span + span {
@@ -47,7 +53,11 @@
       padding: 1.5rem;
       width: 33.3333%;
       font-size: 1.6rem;
+      font-weight: 700;
       text-align: center;
+
+      @include flex(row);
+      gap: 1rem;
 
       img {
         height: 2rem;
