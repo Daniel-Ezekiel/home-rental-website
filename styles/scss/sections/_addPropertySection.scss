@@ -89,6 +89,10 @@
             font-weight: 700;
             color: $orange;
           }
+
+          .upload-success {
+            color: green;
+          }
         }
 
         input[type='file'] {

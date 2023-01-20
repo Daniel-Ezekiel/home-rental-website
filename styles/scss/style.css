@@ -758,6 +758,9 @@ header {
   font-weight: 700;
   color: #f4511e;
 }
+.add-property-section .form-container form .form-control .upload-container .upload-success {
+  color: green;
+}
 .add-property-section .form-container form .form-control input[type=file] {
   display: none;
 }
