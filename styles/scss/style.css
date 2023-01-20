@@ -752,6 +752,7 @@ header {
   border: 0.2rem dashed #f4511e;
   background-color: rgba(244, 81, 30, 0.01);
   text-align: center;
+  cursor: pointer;
 }
 .add-property-section .form-container form .form-control .upload-container p {
   margin: 0;
@@ -786,7 +787,8 @@ header {
   .add-property-section .form-container form .form-control {
     width: 47%;
   }
-  .add-property-section .form-container form .textarea-control {
+  .add-property-section .form-container form .textarea-control,
+.add-property-section .form-container form .upload-photos-control {
     width: 100%;
   }
 }
@@ -811,7 +813,8 @@ header {
   .add-property-section .form-container form .form-control label {
     font-size: 1.7rem;
   }
-  .add-property-section .form-container form .textarea-control {
+  .add-property-section .form-container form .textarea-control,
+.add-property-section .form-container form .upload-photos-control {
     width: 100%;
   }
 }
@@ -906,10 +909,13 @@ header {
   position: relative;
   margin: 0 -1.2rem -1.2rem;
 }
-.testimonials .testimonial-video img {
+.testimonials .testimonial-video video {
+  display: block;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.testimonials .testimonial-video img + img {
+.testimonials .testimonial-video video + img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -927,6 +933,13 @@ header {
     margin: 7rem 0;
     padding-top: 0;
     flex-direction: row;
+  }
+  .testimonials .testimonial-video {
+    width: 50%;
+  }
+  .testimonials .testimonial-video video {
+    aspect-ratio: 1/1;
+    height: 100%;
   }
 }
 @media screen and (min-width: 1280px) {

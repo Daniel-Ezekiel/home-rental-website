@@ -83,6 +83,7 @@
           border: 0.2rem dashed $orange;
           background-color: rgba(244, 81, 30, 0.01);
           text-align: center;
+          cursor: pointer;
 
           p {
             margin: 0;
@@ -124,7 +125,8 @@
         .form-control {
           width: 47%;
         }
-        .textarea-control {
+        .textarea-control,
+        .upload-photos-control {
           width: 100%;
         }
       }
@@ -157,7 +159,8 @@
             font-size: 1.7rem;
           }
         }
-        .textarea-control {
+        .textarea-control,
+        .upload-photos-control {
           width: 100%;
         }
       }
