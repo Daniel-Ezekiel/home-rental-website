@@ -89,7 +89,7 @@
 
 @media screen and (min-width: 1280px) {
   #hero-section {
-    height: 80vh;
+    max-height: 100vh;
     @include flex(column, flex-start, center);
 
     .hero-main {

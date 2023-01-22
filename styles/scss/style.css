@@ -116,7 +116,7 @@ main > section h2 {
 }
 @media screen and (min-width: 1280px) {
   #hero-section {
-    height: 80vh;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
