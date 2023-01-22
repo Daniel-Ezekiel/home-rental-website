@@ -1,13 +1,21 @@
-@import "../variables";
-@import "../mixins";
+@import '../variables';
+@import '../mixins';
 
 main > section {
   padding: 1.2rem;
 
   h2 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     text-decoration: underline;
     text-decoration-color: $orange;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  main > section {
+    h2 {
+      font-size: 2.8rem;
+    }
   }
 }
 

@@ -41,6 +41,10 @@
         label {
           font-family: $Poppins;
           font-weight: 700;
+
+          span {
+            color: $orange;
+          }
         }
 
         input {
@@ -92,9 +96,11 @@
 
           p {
             margin: 0;
+            font-size: 1.6rem;
             font-weight: 700;
 
             span {
+              font-size: 1.2rem;
               color: $orange;
             }
           }

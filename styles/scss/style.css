@@ -20,12 +20,17 @@ main > section {
   padding: 1.2rem;
 }
 main > section h2 {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   text-decoration: underline;
   -webkit-text-decoration-color: #f4511e;
           text-decoration-color: #f4511e;
 }
 
+@media screen and (min-width: 640px) {
+  main > section h2 {
+    font-size: 2.8rem;
+  }
+}
 @media screen and (min-width: 1280px) {
   main > section h2 {
     font-size: 3.2rem;
@@ -270,9 +275,17 @@ header {
   gap: 2.5rem;
 }
 .key-features-section h2 {
-  text-decoration: underline;
-  -webkit-text-decoration-color: #f4511e;
-          text-decoration-color: #f4511e;
+  text-decoration: none;
+  position: relative;
+}
+.key-features-section h2:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 13rem;
+  height: 0.3rem;
+  background-color: #f4511e;
 }
 .key-features-section img[alt=feature-property] {
   display: none;
@@ -305,6 +318,11 @@ header {
   box-shadow: 0px 12px 19px rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (min-width: 640px) {
+  .key-features-section h2:after {
+    width: 27.5rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .key-features-section {
     flex-direction: row;
@@ -347,6 +365,9 @@ header {
     justify-content: space-around;
     gap: 2rem;
     width: 120rem;
+  }
+  .key-features-section h2:after {
+    width: 31.5rem;
   }
   .key-features-section .feature-home {
     width: 38rem;
@@ -455,6 +476,17 @@ header {
 }
 .properties-section .h2-and-btn h2 {
   margin: 0.5rem 0;
+  text-decoration: none;
+  position: relative;
+}
+.properties-section .h2-and-btn h2:after {
+  position: absolute;
+  content: "";
+  background-color: #f4511e;
+  height: 0.3rem;
+  bottom: 0;
+  left: 0;
+  width: 40%;
 }
 .properties-section .h2-and-btn a {
   background-color: #f4511e;
@@ -735,6 +767,9 @@ header {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
 }
+.add-property-section .form-container form .form-control label span {
+  color: #f4511e;
+}
 .add-property-section .form-container form .form-control input {
   display: block;
   width: -webkit-fill-available;
@@ -784,9 +819,11 @@ header {
 }
 .add-property-section .form-container form .form-control .upload-container p {
   margin: 0;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 .add-property-section .form-container form .form-control .upload-container p span {
+  font-size: 1.2rem;
   color: #f4511e;
 }
 .add-property-section .form-container form .form-control .upload-container .upload-success {

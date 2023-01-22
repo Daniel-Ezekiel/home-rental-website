@@ -16,6 +16,18 @@
 
     h2 {
       margin: 0.5rem 0;
+      text-decoration: none;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        background-color: $orange;
+        height: 0.3rem;
+        bottom: 0;
+        left: 0;
+        width: 40%;
+      }
     }
 
     a {

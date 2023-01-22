@@ -1,5 +1,5 @@
-@import "../variables";
-@import "../mixins";
+@import '../variables';
+@import '../mixins';
 
 .key-features-section {
   padding-top: 5rem;
@@ -8,11 +8,21 @@
   gap: 2.5rem;
 
   h2 {
-    text-decoration: underline;
-    text-decoration-color: $orange;
+    text-decoration: none;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 13rem;
+      height: 0.3rem;
+      background-color: $orange;
+    }
   }
 
-  img[alt="feature-property"] {
+  img[alt='feature-property'] {
     display: none;
   }
 
@@ -41,6 +51,16 @@
   }
 }
 
+@media screen and (min-width: 640px) {
+  .key-features-section {
+    h2 {
+      &:after {
+        width: 27.5rem;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .key-features-section {
     flex-direction: row;
@@ -49,7 +69,7 @@
     .feature-home {
       width: 48%;
 
-      img[alt="feature-property"] {
+      img[alt='feature-property'] {
         display: block;
         border-radius: 5rem 0;
         width: 100%;
@@ -74,7 +94,7 @@
     .feature-home {
       width: 30rem;
 
-      img[alt="feature-property"] {
+      img[alt='feature-property'] {
         display: block;
         border-radius: 5rem 0;
         width: 100%;
@@ -92,6 +112,12 @@
     justify-content: space-around;
     gap: 2rem;
     width: 120rem;
+
+    h2 {
+      &:after {
+        width: 31.5rem;
+      }
+    }
 
     .feature-home {
       width: 38rem;
